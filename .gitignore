@@ -1,0 +1,6 @@
+# Eclipse files
+[Dd]ebug/
+[Rr]elease/
+.settings/
+.cproject
+.project
