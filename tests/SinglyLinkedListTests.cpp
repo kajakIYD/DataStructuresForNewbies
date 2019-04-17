@@ -19,51 +19,57 @@ SCENARIO("List initialization", "SinglyLinkedList")
 
 SCENARIO("List elements addition", "SinglyLinkedList")
 {
-	SinglyLinkedList list;
-
-	WHEN("Add element")
+	GIVEN("Empty list")
 	{
-		list.addToFront(42);
+		SinglyLinkedList list;
 
-		THEN ("List is NOT empty")
+		WHEN("Add element")
 		{
-			REQUIRE_FALSE(list.isEmpty());
+			list.addToFront(42);
+
+			THEN ("List is NOT empty")
+			{
+				REQUIRE_FALSE(list.isEmpty());
+			}
 		}
 	}
 }
 
 SCENARIO("List elements reading", "SinglyLinkedList")
 {
-	SinglyLinkedList list;
-	list.addToFront(30);
-	list.addToFront(20);
-	list.addToFront(10);
-
-	WHEN("Read first element")
+	GIVEN("List with three elements")
 	{
-		int first = list.getFirst();
+		SinglyLinkedList list;
+		list.addToFront(30);
+		list.addToFront(20);
+		list.addToFront(10);
 
-		THEN("Its last added element")
+		WHEN("Read first element")
 		{
-			REQUIRE(first == 10);
-		}
-	}
+			int first = list.getFirst();
 
-	WHEN("Read elements")
-	{
-		std::vector<int> readElements;
-		for (SinglyLinkedListNode * node = list.getHead(); node != nullptr; node = node->getNext())
-		{
-			readElements.push_back(node->getContent());
+			THEN("Its last added element")
+			{
+				REQUIRE(first == 10);
+			}
 		}
 
-		THEN("Read all added elements")
+		WHEN("Read elements")
 		{
-			REQUIRE(readElements.size() == 3);
+			std::vector<int> readElements;
+			for (SinglyLinkedListNode * node = list.getHead(); node != nullptr; node = node->getNext())
+			{
+				readElements.push_back(node->getContent());
+			}
 
-			REQUIRE(readElements[0] == 10);
-			REQUIRE(readElements[1] == 20);
-			REQUIRE(readElements[2] == 30);
+			THEN("Read all added elements")
+			{
+				REQUIRE(readElements.size() == 3);
+
+				REQUIRE(readElements[0] == 10);
+				REQUIRE(readElements[1] == 20);
+				REQUIRE(readElements[2] == 30);
+			}
 		}
 	}
 }
