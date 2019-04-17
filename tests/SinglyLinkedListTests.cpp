@@ -73,3 +73,36 @@ SCENARIO("List elements reading", "SinglyLinkedList")
 		}
 	}
 }
+
+SCENARIO("List elements removing", "SinglyLinkedList")
+{
+	GIVEN ("List with three elements")
+	{
+		SinglyLinkedList list;
+		list.addToFront(30);
+		list.addToFront(20);
+		list.addToFront(10);
+
+		WHEN("Remove front element")
+		{
+			list.removeFromFront();
+
+			THEN("First element is pre-last-added")
+			{
+				REQUIRE(list.getFirst() == 20);
+			}
+		}
+
+		WHEN("Remove all elements")
+		{
+			list.removeFromFront();
+			list.removeFromFront();
+			list.removeFromFront();
+
+			THEN("List is empty")
+			{
+				REQUIRE(list.isEmpty());
+			}
+		}
+	}
+}
