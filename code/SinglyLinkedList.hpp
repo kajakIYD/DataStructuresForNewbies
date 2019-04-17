@@ -23,10 +23,9 @@ public:
 	void addToFront(int element);
 	int getFirst() const;
 	SinglyLinkedListNode * getHead() const;
+	void removeFromFront();
 
 private:
 
 	SinglyLinkedListNode * head = nullptr;
-	bool empty = true;
-	int front;
 };

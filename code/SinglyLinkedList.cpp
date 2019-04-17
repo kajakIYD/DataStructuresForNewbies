@@ -12,14 +12,11 @@ int SinglyLinkedListNode::getContent() const
 
 bool SinglyLinkedList::isEmpty() const
 {
-	return empty;
+	return head == nullptr;
 }
 
 void SinglyLinkedList::addToFront(int element)
 {
-	empty = false;
-	front = element;
-
 	SinglyLinkedListNode * newNode = new SinglyLinkedListNode;
 	newNode->content = element;
 	newNode->next = head;
@@ -29,10 +26,17 @@ void SinglyLinkedList::addToFront(int element)
 
 int SinglyLinkedList::getFirst() const
 {
-	return front;
+	return head->getContent();
 }
 
 SinglyLinkedListNode * SinglyLinkedList::getHead() const
 {
 	return head;
+}
+
+void SinglyLinkedList::removeFromFront()
+{
+	SinglyLinkedListNode * nodeToRemove = head;
+	head = nodeToRemove->next;
+	delete nodeToRemove;
 }
