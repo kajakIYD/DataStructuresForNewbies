@@ -2,5 +2,10 @@
 
 bool SinglyLinkedList::isEmpty() const
 {
-	return true;
+	return empty;
+}
+
+void SinglyLinkedList::addToFront(int element)
+{
+	empty = false;
 }

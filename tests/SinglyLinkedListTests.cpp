@@ -14,3 +14,18 @@ SCENARIO("List initialization", "SinglyLinkedList")
 		}
 	}
 }
+
+SCENARIO("List elements addition", "SinglyLinkedList")
+{
+	SinglyLinkedList list;
+
+	WHEN("Add element")
+	{
+		list.addToFront(42);
+
+		THEN ("List is NOT empty")
+		{
+			REQUIRE_FALSE(list.isEmpty());
+		}
+	}
+}
