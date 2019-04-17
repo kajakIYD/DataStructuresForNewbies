@@ -8,4 +8,10 @@ bool SinglyLinkedList::isEmpty() const
 void SinglyLinkedList::addToFront(int element)
 {
 	empty = false;
+	front = element;
+}
+
+int SinglyLinkedList::getFirst() const
+{
+	return front;
 }

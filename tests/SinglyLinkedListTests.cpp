@@ -29,3 +29,21 @@ SCENARIO("List elements addition", "SinglyLinkedList")
 		}
 	}
 }
+
+SCENARIO("List elements reading", "SinglyLinkedList")
+{
+	SinglyLinkedList list;
+	list.addToFront(30);
+	list.addToFront(20);
+	list.addToFront(10);
+
+	WHEN("Read first element")
+	{
+		int first = list.getFirst();
+
+		THEN("Its last added element")
+		{
+			REQUIRE(first == 10);
+		}
+	}
+}
