@@ -1,5 +1,7 @@
 #include "catch2/catch.hpp"
 
+#include <vector>
+
 #include "../code/SinglyLinkedList.hpp"
 
 SCENARIO("List initialization", "SinglyLinkedList")
@@ -44,6 +46,24 @@ SCENARIO("List elements reading", "SinglyLinkedList")
 		THEN("Its last added element")
 		{
 			REQUIRE(first == 10);
+		}
+	}
+
+	WHEN("Read elements")
+	{
+		std::vector<int> readElements;
+		for (SinglyLinkedListNode * node = list.getHead(); node != nullptr; node = node->getNext())
+		{
+			readElements.push_back(node->getContent());
+		}
+
+		THEN("Read all added elements")
+		{
+			REQUIRE(readElements.size() == 3);
+
+			REQUIRE(readElements[0] == 10);
+			REQUIRE(readElements[1] == 20);
+			REQUIRE(readElements[2] == 30);
 		}
 	}
 }
