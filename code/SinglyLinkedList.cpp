@@ -45,6 +45,19 @@ void SinglyLinkedList::removeFromFront()
 
 std::ostream & operator<<(std::ostream & out, const SinglyLinkedList & list)
 {
-	out << "[]";
+	out << "[";
+
+	if (!list.isEmpty())
+	{
+		SinglyLinkedListNode * head = list.getHead();
+		out << head->getContent();
+
+		for (SinglyLinkedListNode * node = head->getNext(); node != nullptr; node = node->getNext())
+		{
+			out << ", " << node->getContent();
+		}
+	}
+
+	out << "]";
 	return out;
 }

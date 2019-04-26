@@ -125,4 +125,23 @@ SCENARIO("List elements printing", "SinglyLinkedList")
 			}
 		}
 	}
+
+	GIVEN("List with some elements")
+	{
+		SinglyLinkedList list;
+		list.addToFront(30);
+		list.addToFront(20);
+		list.addToFront(10);
+
+		WHEN("Write list to output stream")
+		{
+			std::ostringstream outputStream;
+			outputStream << list;
+
+			THEN ("List content is printed out")
+			{
+				REQUIRE(outputStream.str() == "[10, 20, 30]");
+			}
+		}
+	}
 }
