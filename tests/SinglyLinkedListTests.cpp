@@ -140,6 +140,16 @@ SCENARIO("List elements finding", "SinglyLinkedList")
 				REQUIRE(std::all_of(std::begin(answers), std::end(answers), [](bool answer){ return answer == true; }));
 			}
 		}
+
+		WHEN("Find element which is not contained")
+		{
+			SinglyLinkedListNode * node = list.find(42);
+
+			THEN("Returned pointer is nullptr")
+			{
+				REQUIRE(node == nullptr);
+			}
+		}
 	}
 }
 

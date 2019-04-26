@@ -59,6 +59,11 @@ bool SinglyLinkedList::contains(int element) const
 	return true;
 }
 
+SinglyLinkedListNode * SinglyLinkedList::find(int element)
+{
+	return nullptr;
+}
+
 void SinglyLinkedList::clear()
 {
 	while (!isEmpty())
