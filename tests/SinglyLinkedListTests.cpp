@@ -162,24 +162,19 @@ SCENARIO("List elements finding", "SinglyLinkedList")
 
 		WHEN("Check if added element is contained")
 		{
-			std::vector<bool> answers;
-			answers.push_back(list.contains(10));
-			answers.push_back(list.contains(20));
-			answers.push_back(list.contains(30));
-
 			THEN("Answer is true")
 			{
-				REQUIRE(std::all_of(std::begin(answers), std::end(answers), [](bool answer){ return answer == true; }));
+				REQUIRE(list.contains(10));
+				REQUIRE(list.contains(20));
+				REQUIRE(list.contains(30));
 			}
 		}
 
 		WHEN("Check if non added element is contained")
 		{
-			bool answer = list.contains(42);
-
 			THEN("Answer is false")
 			{
-				REQUIRE(answer == false);
+				REQUIRE_FALSE(list.contains(42));
 			}
 		}
 
