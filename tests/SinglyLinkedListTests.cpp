@@ -141,6 +141,16 @@ SCENARIO("List elements finding", "SinglyLinkedList")
 			}
 		}
 
+		WHEN("Check if non added element is contained")
+		{
+			bool answer = list.contains(42);
+
+			THEN("Answer is false")
+			{
+				REQUIRE(answer == false);
+			}
+		}
+
 		WHEN("Find element which is contained")
 		{
 			SinglyLinkedListNode * node = list.find(20);

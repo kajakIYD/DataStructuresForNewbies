@@ -56,7 +56,7 @@ void SinglyLinkedList::removeFromFront()
 
 bool SinglyLinkedList::contains(int element) const
 {
-	return true;
+	return find(element) != nullptr;
 }
 
 SinglyLinkedListNode * SinglyLinkedList::find(int element)
