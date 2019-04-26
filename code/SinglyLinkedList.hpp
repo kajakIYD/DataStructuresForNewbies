@@ -21,6 +21,8 @@ class SinglyLinkedList
 {
 public:
 
+	SinglyLinkedList();
+
 	bool isEmpty() const;
 	void addToFront(int element);
 	int getFirst() const;
@@ -30,7 +32,7 @@ public:
 
 private:
 
-	SinglyLinkedListNode * head = nullptr;
+	SinglyLinkedListNode * head;
 
 	friend std::ostream & operator<<(std::ostream & out, const SinglyLinkedList & list);
 };

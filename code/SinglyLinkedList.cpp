@@ -2,6 +2,12 @@
 
 #include <ostream>
 
+SinglyLinkedList::SinglyLinkedList():
+	head(nullptr)
+{
+
+}
+
 SinglyLinkedListNode * SinglyLinkedListNode::getNext() const
 {
 	return next;
