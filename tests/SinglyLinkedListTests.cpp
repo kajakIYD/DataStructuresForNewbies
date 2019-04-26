@@ -1,5 +1,6 @@
 #include "catch2/catch.hpp"
 
+#include <sstream>
 #include <vector>
 
 #include "../code/SinglyLinkedList.hpp"
@@ -102,6 +103,25 @@ SCENARIO("List elements removing", "SinglyLinkedList")
 			THEN("List is empty")
 			{
 				REQUIRE(list.isEmpty());
+			}
+		}
+	}
+}
+
+SCENARIO("List elements printing", "SinglyLinkedList")
+{
+	GIVEN("Empty list")
+	{
+		SinglyLinkedList list;
+
+		WHEN("Write list to output stream")
+		{
+			std::ostringstream outputStream;
+			outputStream << list;
+
+			THEN ("List content is printed out")
+			{
+				REQUIRE(outputStream.str() == "[]");
 			}
 		}
 	}

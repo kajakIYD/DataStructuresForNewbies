@@ -1,5 +1,7 @@
 #include "SinglyLinkedList.hpp"
 
+#include <ostream>
+
 SinglyLinkedListNode * SinglyLinkedListNode::getNext() const
 {
 	return next;
@@ -39,4 +41,10 @@ void SinglyLinkedList::removeFromFront()
 	SinglyLinkedListNode * nodeToRemove = head;
 	head = nodeToRemove->next;
 	delete nodeToRemove;
+}
+
+std::ostream & operator<<(std::ostream & out, const SinglyLinkedList & list)
+{
+	out << "[]";
+	return out;
 }

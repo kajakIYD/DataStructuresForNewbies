@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iosfwd>
+
 class SinglyLinkedListNode
 {
 public:
@@ -28,4 +30,6 @@ public:
 private:
 
 	SinglyLinkedListNode * head = nullptr;
+
+	friend std::ostream & operator<<(std::ostream & out, const SinglyLinkedList & list);
 };
