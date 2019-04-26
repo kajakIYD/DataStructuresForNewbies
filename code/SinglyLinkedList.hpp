@@ -30,6 +30,7 @@ public:
 	SinglyLinkedListNode * getHead() const;
 	void removeFromFront();
 	bool contains(int element) const;
+	SinglyLinkedListNode * find(int element);
 	const SinglyLinkedListNode * find(int element) const;
 	void clear();
 

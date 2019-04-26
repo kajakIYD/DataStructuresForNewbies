@@ -59,6 +59,15 @@ bool SinglyLinkedList::contains(int element) const
 	return true;
 }
 
+SinglyLinkedListNode * SinglyLinkedList::find(int element)
+{
+	// What is going on here?
+	// Explanation: https://stackoverflow.com/questions/856542/
+
+	const SinglyLinkedList * constThis = this;
+	return const_cast<SinglyLinkedListNode *>(constThis->find(element));
+}
+
 const SinglyLinkedListNode * SinglyLinkedList::find(int element) const
 {
 	for (SinglyLinkedListNode * node = head; node != nullptr; node = node->next)
