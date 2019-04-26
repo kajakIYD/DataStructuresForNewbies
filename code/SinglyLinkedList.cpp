@@ -43,6 +43,14 @@ void SinglyLinkedList::removeFromFront()
 	delete nodeToRemove;
 }
 
+void SinglyLinkedList::clear()
+{
+	while (!isEmpty())
+	{
+		removeFromFront();
+	}
+}
+
 std::ostream & operator<<(std::ostream & out, const SinglyLinkedList & list)
 {
 	out << "[";

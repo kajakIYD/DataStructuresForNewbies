@@ -26,6 +26,7 @@ public:
 	int getFirst() const;
 	SinglyLinkedListNode * getHead() const;
 	void removeFromFront();
+	void clear();
 
 private:
 

@@ -105,6 +105,16 @@ SCENARIO("List elements removing", "SinglyLinkedList")
 				REQUIRE(list.isEmpty());
 			}
 		}
+
+		WHEN("Clear list")
+		{
+			list.clear();
+
+			THEN("List is empty")
+			{
+				REQUIRE(list.isEmpty());
+			}
+		}
 	}
 }
 
