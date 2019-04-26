@@ -19,7 +19,7 @@ Singly Linked List:
 - [x] Remove element from front
 - [x] Read head and iterate over nodes
 - [x] Find node with given content
-- [ ] Check if contains element
+- [x] Check if contains element
 - [x] Print content to stream
 - [x] Clear (remove all elements)
 
