@@ -2,6 +2,12 @@
 
 Goal of this repository is to provide materials for learning about data structures for computer science students (and all, who are interested in). Repository constains data structures implementations, which are commonly required on computer science classes. There is also included executable documentation (unit tests), which shows you behaviour of data structures and makes sure, that everything works as you expected.
 
+## How to use this repository
+
+In folder [code/](./code/) there are implementations of data structures. If you want to know, how data structure works inside, you should look there.
+
+In folder [tests/](./tests/) there are unit tests of implemented data structures. You can learn from them, how data structure should work from higher level point of view. If you aren't familiar with unit tests, you can learn some basics from [introduction to Catch2](https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md#writing-tests) test framework (which I use in that project).
+
 ## What is important in this project
 
 Important:
