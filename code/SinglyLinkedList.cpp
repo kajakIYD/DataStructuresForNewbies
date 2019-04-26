@@ -8,6 +8,11 @@ SinglyLinkedList::SinglyLinkedList():
 
 }
 
+SinglyLinkedList::~SinglyLinkedList()
+{
+	clear();
+}
+
 SinglyLinkedListNode * SinglyLinkedListNode::getNext() const
 {
 	return next;

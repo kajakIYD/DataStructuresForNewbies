@@ -22,6 +22,7 @@ class SinglyLinkedList
 public:
 
 	SinglyLinkedList();
+	~SinglyLinkedList();
 
 	bool isEmpty() const;
 	void addToFront(int element);
