@@ -19,7 +19,7 @@ Singly Linked List:
 - [x] Remove element from front
 - [x] Read head and iterate over nodes
 - [x] Print content to stream
-- [ ] Clear (remove all elements)
+- [x] Clear (remove all elements)
 
 Doubly Linked List: *not started*
 
