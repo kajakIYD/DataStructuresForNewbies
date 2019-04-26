@@ -59,7 +59,7 @@ bool SinglyLinkedList::contains(int element) const
 	return true;
 }
 
-SinglyLinkedListNode * SinglyLinkedList::find(int element)
+const SinglyLinkedListNode * SinglyLinkedList::find(int element) const
 {
 	for (SinglyLinkedListNode * node = head; node != nullptr; node = node->next)
 	{
