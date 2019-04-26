@@ -17,6 +17,7 @@ Singly Linked List:
 - [x] Add element to front
 - [x] Read first element
 - [x] Remove element from front
+- [x] Count elements
 - [x] Read head and iterate over nodes
 - [x] Find node with given content
 - [x] Check if contains element

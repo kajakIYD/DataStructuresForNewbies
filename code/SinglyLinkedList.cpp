@@ -54,6 +54,18 @@ void SinglyLinkedList::removeFromFront()
 	delete nodeToRemove;
 }
 
+int SinglyLinkedList::getSize() const
+{
+	int size = 0;
+
+	for (SinglyLinkedListNode * node = head; node != nullptr; node = node->next)
+	{
+		++size;
+	}
+
+	return size;
+}
+
 bool SinglyLinkedList::contains(int element) const
 {
 	return find(element) != nullptr;

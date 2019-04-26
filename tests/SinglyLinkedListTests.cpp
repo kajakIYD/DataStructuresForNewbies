@@ -119,6 +119,38 @@ SCENARIO("List elements removing", "SinglyLinkedList")
 	}
 }
 
+SCENARIO("List elements counting", "SinglyLinkedList")
+{
+	GIVEN("Empty list")
+	{
+		SinglyLinkedList list;
+
+		REQUIRE(list.getSize() == 0);
+
+		WHEN("Add element")
+		{
+			list.addToFront(42);
+
+			THEN("Size increase")
+			{
+				REQUIRE(list.getSize() == 1);
+			}
+		}
+
+		WHEN("Add multiple elements")
+		{
+			list.addToFront(42);
+			list.addToFront(42);
+			list.addToFront(42);
+
+			THEN("Size increase")
+			{
+				REQUIRE(list.getSize() == 3);
+			}
+		}
+	}
+}
+
 SCENARIO("List elements finding", "SinglyLinkedList")
 {
 	GIVEN("List with some elements")
