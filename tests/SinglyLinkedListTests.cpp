@@ -141,6 +141,17 @@ SCENARIO("List elements finding", "SinglyLinkedList")
 			}
 		}
 
+		WHEN("Find element which is contained")
+		{
+			SinglyLinkedListNode * node = list.find(20);
+
+			THEN("Pointer to requested node is returned")
+			{
+				REQUIRE(node != nullptr);
+				REQUIRE(node->getContent() == 20);
+			}
+		}
+
 		WHEN("Find element which is not contained")
 		{
 			SinglyLinkedListNode * node = list.find(42);
