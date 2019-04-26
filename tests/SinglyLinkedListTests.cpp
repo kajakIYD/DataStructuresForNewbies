@@ -1,5 +1,6 @@
 #include "catch2/catch.hpp"
 
+#include <algorithm>
 #include <sstream>
 #include <vector>
 
@@ -113,6 +114,30 @@ SCENARIO("List elements removing", "SinglyLinkedList")
 			THEN("List is empty")
 			{
 				REQUIRE(list.isEmpty());
+			}
+		}
+	}
+}
+
+SCENARIO("List elements finding", "SinglyLinkedList")
+{
+	GIVEN("List with some elements")
+	{
+		SinglyLinkedList list;
+		list.addToFront(30);
+		list.addToFront(20);
+		list.addToFront(10);
+
+		WHEN("Check if added element is contained")
+		{
+			std::vector<bool> answers;
+			answers.push_back(list.contains(10));
+			answers.push_back(list.contains(20));
+			answers.push_back(list.contains(30));
+
+			THEN("Answer is true")
+			{
+				REQUIRE(std::all_of(std::begin(answers), std::end(answers), [](bool answer){ return answer == true; }));
 			}
 		}
 	}

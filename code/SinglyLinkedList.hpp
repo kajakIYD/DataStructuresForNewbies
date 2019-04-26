@@ -29,6 +29,7 @@ public:
 	int getFirst() const;
 	SinglyLinkedListNode * getHead() const;
 	void removeFromFront();
+	bool contains(int element) const;
 	void clear();
 
 private:

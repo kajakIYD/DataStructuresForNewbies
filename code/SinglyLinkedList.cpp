@@ -54,6 +54,11 @@ void SinglyLinkedList::removeFromFront()
 	delete nodeToRemove;
 }
 
+bool SinglyLinkedList::contains(int element) const
+{
+	return true;
+}
+
 void SinglyLinkedList::clear()
 {
 	while (!isEmpty())
